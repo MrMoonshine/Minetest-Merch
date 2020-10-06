@@ -7,6 +7,7 @@ The generated painting's sizes are 1024x1024.
 If your image is a rectangle, it's longer side will be cropped to 1024 pixels and the remaining space will be filled with transparency.
 
 Dump all your desired Minetest-paintings into the textures folder and run the script. (.png, .jpg, .jpeg)
-to execute the script execute the following:
-> user@host:\~/mods/merch$ chmod u+x generate.sh
-> user@host:\~/mods/merch$ ./generate.sh
+* give the script the permission to be executed
+> 'user@host:\~/mods/merch$ chmod u+x generate.sh'
+* to execute the script execute the following:
+> 'user@host:\~/mods/merch$ ./generate.sh'
