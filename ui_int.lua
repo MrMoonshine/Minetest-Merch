@@ -29,6 +29,8 @@ local function drawPainting(name)
     end
 
     local stack_i = inv:get_stack("merch_i",1)
+    local stack_o = inv:get_stack("merch_o",1)
+    local name_o = stack_o:get_name()
     local canv = stack_i:get_name()
     --print("Input item: "..canv)
 
@@ -43,13 +45,16 @@ local function drawPainting(name)
     elseif canv == "merch:canvas_extra_large" then
         pname = pname.."extra_large_"..name
     else
-        return ""
+        return
     end
+
+    if name_o == "" or name_o == pname then
     --print("Output item: "..pname)
     inv:remove_item("merch_i",ItemStack(canv.." 1"))
     local outpainting = ItemStack(pname.." 1")
 
     inv:add_item("merch_o",outpainting)
+    end
 end
 
 function paintingUI.on_click_buttons(player, context, fields)
